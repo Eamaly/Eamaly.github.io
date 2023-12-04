@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amalia</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Amalia Szoke</h1>
+      <img height="150" src="/amalia.jpg" alt="selfie" />
+      <p id="job-title">Contabil</p>
+    </header>
+
+    <section id="content">
+      <div id="side-menu">
+        <section>M1</section>
+        <section>M2</section>
+      </div>
+      <div id="main">Main Content</div>
+    </section>
+
+    <footer>Footer</footer>
+
+    <ul id="top-menu-bar">
+      <li><a href="#" onclick="showPage('home')">HOME</a></li>
+      <!-- <li><a href="#" onclick="showHome" class="active">HOME</a></li> -->
+      <li><a href="#" onclick="showPage('skills')>Skills</a></li>
+      <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+      <li><a href="#" onclick="showPage('languages')" >Languages</a></li>
+    </ul>
+
+    <h2>Skills</h2>
+    <ul>
+      <li class="favorite">HTML</li>
+      <li>CSS</li>
+      <li class="favorite">JS</li>
+    </ul>
+
+    <h2>Known Languages</h2>
+    <table border="1">
+      <tr>
+        <th>Language</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td class="favorite">Romanian</td>
+        <td>Native</td>
+      </tr>
+      <tr>
+        <td>English</td>
+        <td>Profesional</td>
+      </tr>
+    </table>
+
+    Open my
+    <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
+    account.
+    <form action="secretara.html">
+      <h2>Contact</h2>
+      <div>
+        <label for="userEmail">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="userEmail"
+          placeholder="your@email.com"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="userName">Your name</label>
+        <input
+          type="text"
+          name="name"
+          id="userName"
+          placeholder="enter your name"
+          required
+        />
+      </div>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <p>
+      <!-- Start server: CTRL + Shift + P ->Browser Sync: mode in Browser -> Enter ->
+      / -> Enter -->
+    </p>
+  </body>
+</html>

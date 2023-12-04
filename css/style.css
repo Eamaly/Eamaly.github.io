@@ -6,6 +6,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
 }
 #content {
   flex: 1;
@@ -69,4 +70,11 @@ th {
 #top-menu-bar a.active {
   color: #334455;
   background-color: blue;
+}
+.page {
+  background-color: #338852;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+  box-shadow: #334455;
 }
