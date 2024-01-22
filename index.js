@@ -1,4 +1,4 @@
-var activePage = "projects";
+var activePage = "home";
 
 function show(id) {
   console.info("show", id);
@@ -13,8 +13,51 @@ function hide(id) {
 }
 
 function showPage(id) {
-  showPage(id);
-  activePage = id;
+  console.info("showPage", id);
+  var prevlink = document.querySelector("a[data-page=" + activePage + "]");
+  hide(activePage);
+  var nextlink = document.querySelector(`a[data-page=${id}]`);
+  nextlink.classList.add("active");
+}
+
+function initEvents() {
+  var toolbar = document.querySelector("#top-menu-bar");
+  toolbar.addEventListener("click", function (e) {
+    if (e.target.matches("a")) {
+      var page = e.target.dataset.tolowerCase();
+      console.warn("event", page);
+      showPage(page);
+    }
+  });
+}
+
+function showSkills() {
+  var ul = document.querySelector("#skills ul");
+
+  var skills = ["HTML", "CSS", "JS"];
+
+  var text = skills.map(function (skill) {
+    console.info("inside %o map", skill);
+    return `<li> ${skill}</li>`;
+  });
+  console.warn(text);
+
+  ul.innerHTML = text.join("");
+
+  ul.innerHTML = "<li>HTML</li";
+  ul.innerHTML = ul.innerHTML + "<li>CSS</li";
+  ul.innerHTML = ul.innerHTML + "<li>JS</li";
+  ul.innerHTML += "<li>JSS</li";
+}
+
+function loadSkills() {
+  var promise = fetch("skills.json");
+  promise.then(function (r) {
+    const jsonPromise = r.json();
+    jsonPromise.then(function (skills) {
+      showSkills(skills);
+    });
+  });
 }
 
 // function showSkills() {
@@ -33,6 +76,7 @@ function showPage(id) {
 //   hide(activePage);
 //   show("languages");
 //   activePage = "languages";
+
 // }
 
 // function showPage(id) {
@@ -40,3 +84,7 @@ function showPage(id) {
 //   show(id);
 //   activePage = id;
 // }
+// executii
+showPage(activePage);
+initEvents();
+loadSkills();
