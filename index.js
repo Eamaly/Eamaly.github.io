@@ -51,10 +51,8 @@ function showSkills() {
 }
 
 function loadSkills() {
-  var promise = fetch("skills.json");
-  promise.then(function (r) {
-    const jsonPromise = r.json();
-    jsonPromise.then(function (skills) {
+  fetch("skills.json").then(function (r) {
+    r.json().then(function (skills) {
       showSkills(skills);
     });
   });
