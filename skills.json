@@ -1,7 +1,7 @@
 [
   {
     "name": "HTML",
-    "endorcements": 6,
+    "endorcements": 8,
     "favorite": true
   },
   {
@@ -10,12 +10,11 @@
   },
   {
     "name": "JS",
-    "endorcements": 7,
+    "endorcements": 8,
     "favorite": true
   },
   {
     "name": "Word",
-    "endorcements": false,
+    "endorcements": 2,
     "favorite": false
   }
-]

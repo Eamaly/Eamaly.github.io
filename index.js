@@ -31,7 +31,18 @@ function initEvents() {
   });
 }
 
+function sortSkillsByEndorcements(a, b) {
+  console.info("sort", a, b);
+  return b.endorcements - a.endorcements;
+}
+function sortByName(a, b) {
+  return a.name.localeCompare(b.name);
+}
+
 function showSkills() {
+  // skills.sort(sortSkillsByEndorcements);
+  skills.sort(sortByName);
+
   var ul = document.querySelector("#skills ul");
 
   var skills = ["HTML", "CSS", "JS"];
